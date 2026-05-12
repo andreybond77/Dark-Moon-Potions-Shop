@@ -1,8 +1,20 @@
-import { HashRouter } from 'react-router-dom';  // ← МЕНЯЕМ BrowserRouter НА HashRouter
+import React from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import { CartProvider } from './context/CartContext';
+import { MainLayout } from './components/MainLayout';
+import { HomePage } from './pages/HomePage';
+import { PotionsPage } from './pages/PotionsPage';
+import { CartPage } from './pages/CartPage';
+import { OrdersPage } from './pages/OrdersPage';
+import { ProfilePage } from './pages/ProfilePage';
+import { LoginPage } from './pages/LoginPage';
+import { RegisterPage } from './pages/RegisterPage';
+import './App.css';
 
 function App() {
   return (
-    <HashRouter>  {/* ← НЕ НУЖЕН basename! */}
+    <HashRouter>
       <AuthProvider>
         <CartProvider>
           <Routes>
@@ -21,3 +33,5 @@ function App() {
     </HashRouter>
   );
 }
+
+export default App;
