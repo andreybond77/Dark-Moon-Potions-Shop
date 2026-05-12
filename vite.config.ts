@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Dark-Moon-Potions-Shop/',  // ← ТОЧНОЕ ИМЯ РЕПОЗИТОРИЯ
+  base: '/Dark-Moon-Potions-Shop/',
 })
