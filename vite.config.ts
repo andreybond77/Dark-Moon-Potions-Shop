@@ -3,5 +3,13 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Dark-Moon-Potions-Shop/',
+  base: '/dark-moon-potions/', // Важно: полный путь к репозиторию
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
 })
